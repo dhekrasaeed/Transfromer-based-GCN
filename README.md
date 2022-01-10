@@ -1,25 +1,4 @@
-# VGCN-BERT: Augmenting BERT with Graph Embedding for Text Classification
-
-#### Authors: [Zhibin Lu](https://louis-udm.github.io) (zhibin.lu@umontreal.ca), Pan Du (pan.du@umontreal.ca), [Jian-Yun Nie](http://rali.iro.umontreal.ca/nie/jian-yun-nie/) (nie@iro.umontreal.ca)
-
-## Overview
-This is the implementation of our ECIR 2020 paper: "VGCN-BERT: Augmenting BERT with Graph Embedding for Text Classification".
-
-If you make use of this code or the VGCN-BERT approach in your work, please cite the following paper:
-
-     @inproceedings{ZhibinluGraphEmbedding,
-	     author    = {Zhibin Lu and Pan Du and Jian-Yun Nie},
-	     title     = {VGCN-BERT: Augmenting BERT with Graph Embedding for Text Classification},
-	     booktitle = {Advances in Information Retrieval - 42nd European Conference on {IR}
-                           Research, {ECIR} 2020, Lisbon, Portugal, April 14-17, 2020, Proceedings,
-                           Part {I}},
-  	     series    = {Lecture Notes in Computer Science},
-  	     volume    = {12035},
-  	     pages     = {369--382},
-  	     publisher = {Springer},
-  	     year      = {2020},
-	   }
-
+# Transformer-based-GCN
 ## Requirements
 - Python 3.7
 - NLTK 3.4
@@ -35,24 +14,3 @@ The *data/* directory contains the original datasets and the corresponding pre-p
 
 ### Pre-processing datasets
 Run *prepare_data.py* to pre-process the dataset and generate the vocabulary graph. 
-
-**Examples:**
-```
-python prepare_data.py --ds cola
-```
-
-### Train models
-
-Run *train_vanilla_vgcn_bert.py* to train the Vanilla-VGCN-BERT model. Before training the model, you must ensure that you have pre-processed the dataset.
-
-**Examples:**
-```
-python train_vanilla_vgcn_bert.py --ds cola
-```
-
-Run *train_vgcn_bert.py* to train the VGCN-BERT model. Before training the model, you must ensure that you have pre-processed the dataset.
-
-**Examples:**
-```
-python train_vgcn_bert.py --ds cola
-```
